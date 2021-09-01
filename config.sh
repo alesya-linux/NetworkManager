@@ -68,7 +68,20 @@ python3 -m pip install -U PyGObject   &&
 #    exit 1
 #  fi && popd
 
- pushd elogind && 
+#  pushd elogind && 
+#  ./config.sh $appname && 
+#  if [ $? -eq 0 ]; then 
+#    make
+#  else
+#    exit 1
+#  fi &&  
+#  if [ $? -eq 0 ]; then
+#    sudo make install
+#  else
+#    exit 1
+#  fi && popd
+
+ pushd libpsl && 
  ./config.sh $appname && 
  if [ $? -eq 0 ]; then 
    make
